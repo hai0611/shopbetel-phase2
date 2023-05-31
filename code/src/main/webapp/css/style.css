@@ -1492,7 +1492,8 @@ footer .copyright
 .icon {
   width: 60px;
   height: 60px;
-  margin-right: 15px;
+  display: flex;
+  margin: auto;
 }
 
 .icon-content {

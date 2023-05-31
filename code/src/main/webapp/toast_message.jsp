@@ -157,7 +157,7 @@
             const first_name = document.getElementById("first_name").value
             const last_name = document.getElementById("last_name").value
             const re_password = document.getElementById("re-password").value
-            const checkUniqueEmail = fetch('http://localhost:8080/checkUniqueEmail?email='+email)
+            const checkUniqueEmail = fetch('https://localhost/checkUniqueEmail?email='+email)
                 .then((response) => response.json())
                 .then(e => e);
             const getEmail = async () => {
@@ -171,13 +171,18 @@
                     e.preventDefault()
                     return;
                 } else {
-                    const signUp = fetch('http://localhost:8080/sign-up?email='+ email+
+                    const signUp = fetch('https://localhost/sign-up?email='+ email+
                         '&password='+ password+
                         '&first_name='+ first_name+
                         '&last_name='+last_name
                     )
                         .then((response) => response.json())
                         .then(e => e);
+                    document.getElementById("email").value = ""
+                    document.getElementById("pass").value = ""
+                    document.getElementById("first_name").value = ""
+                    document.getElementById("last_name").value = ""
+                    document.getElementById("re-password").value = ""
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                     showalertdkSuccess()
                 }

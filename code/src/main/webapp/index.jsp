@@ -70,6 +70,5 @@
     <%@ include file="footer.jsp" %>
     <script src="js/scripts.js"></script>
     <script src="js/slideshow.js"></script>
-
 </body>
 </html>

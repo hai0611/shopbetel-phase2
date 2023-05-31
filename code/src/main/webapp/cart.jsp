@@ -87,6 +87,6 @@
         </div>
     </section>
     <%@ include file="footer.jsp" %>
-    <script src="script.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
